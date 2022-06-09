@@ -1,4 +1,4 @@
-# Basic Sample Hardhat Project
+# Developing basic Solidity CrowdFunding SmartContract using hardhat framework
 
 # Getting Started
 
@@ -84,4 +84,21 @@ However, you can manual verify with:
 
 ```
 yarn hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
+```
+
+## Interact with contract
+In order to call the `fund()` or `withdraw()` functions of a deployed contract you can run the `./scripts/fund.js` or `./scripts/withdraw.js` respectively.
+
+```
+yarn hardhat run ./scripts/fund.js
+```
+
+```
+yarn hardhat run ./scripts/withdraw.js
+```
+
+If you want to interact with the contracts deployd on a Testnet, simply add the `--network` parameter to the command followed by the name of the network
+
+```
+yarn hardhat run ./scripts/fund.js --network rinkeby
 ```
